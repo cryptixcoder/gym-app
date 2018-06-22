@@ -4,32 +4,45 @@ import ClassScreen from '../screens/class';
 import Classes from '../screens/classes';
 import Photos from '../screens/photos';
 import Rewards from '../screens/rewards';
-import Notifications from '../screens/notification';
+import Notifications from '../screens/notifications';
 
 import { createStackNavigator } from 'react-navigation';
 
-const MainNavigation = createStackNavigator({
-	Home: {
-		screen: Home
+const MainNavigation = createStackNavigator(
+	{
+		Home: {
+			screen: Home
+		},
+		About: {
+			screen: About
+		},
+		Class: {
+			screen: ClassScreen
+		},
+		Classes: {
+			screen: Classes
+		},
+		Photos: {
+			screen: Photos
+		},
+		Rewards: {
+			screen: Rewards
+		},
+		Notifications: {
+			screen: Notifications
+		}
 	},
-	About: {
-		screen: About
-	},
-	Class: {
-		screen: ClassScreen
-	},
-	Classes: {
-		screen: Classes
-	},
-	Photos: {
-		screen: Photos
-	},
-	Rewards: {
-		screen: Rewards
-	},
-	Notifications: {
-		screen: Notifications
+	{
+		navigationOptions: {
+			gesturesEnabled: false
+		},
+		headerBackTitle: null,
+		headerTruncatedBackTitle: null,
+		headerTintColor: '#000',
+		headerStyle: {
+			backgroundColor: '#FFF'
+		}
 	}
-});
+);
 
 export default MainNavigation;

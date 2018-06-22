@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
 export default class About extends Component {
+	static navigationOptions = ({ navigation }) => {
+		return {
+			title: 'Upcoming Classes',
+			headerBackTitle: null,
+			headerStyle: {
+				backgroundColor: '#FFF'
+			}
+		};
+	};
 	render() {
 		return (
 			<View style={styles.container}>
