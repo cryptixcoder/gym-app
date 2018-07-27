@@ -2,17 +2,27 @@ import React, { Component } from 'react';
 import { Container, Content, Icon } from 'native-base';
 import { View, StyleSheet, Text, Image } from 'react-native';
 
+import * as THEME from '../styles/theme';
+
 import MenuItem from '../components/menuitem';
 
 export default class Home extends Component {
 	static navigationOptions = ({ navigation }) => {
 		return {
-			title: 'Roots Athletics',
+			title: 'Gym App',
 			headerStyle: {
 				backgroundColor: '#FFF'
 			},
 			headerRight: (
-				<Icon name="bell" onPress={() => navigation.navigate('Notifications')} type="SimpleLineIcons" />
+				<View style={{ flex: 1, flexDirection: 'row' }}>
+					<Icon
+						name="qrcode"
+						onPress={() => navigation.navigate('LoyaltyCard')}
+						type="FontAwesome"
+						style={{ marginRight: 10 }}
+					/>
+					<Icon name="bell" onPress={() => navigation.navigate('Notifications')} type="SimpleLineIcons" />
+				</View>
 			)
 		};
 	};
@@ -22,13 +32,7 @@ export default class Home extends Component {
 			<Container>
 				<Content style={{ backgroundColor: '#FFF' }}>
 					<View style={styles.coverContainer}>
-						<Image
-							style={styles.logo}
-							source={{
-								uri:
-									'http://static1.squarespace.com/static/55721b39e4b0888fee574887/t/59e917be18b27d79ae7af544/1523373440790/?format=1500w'
-							}}
-						/>
+						<Image style={styles.logo} source={require('../assets/images/logo.png')} />
 					</View>
 					<View style={styles.menuContainer}>
 						<View style={{ flexDirection: 'row', justifyContent: 'space-around', flex: 1 }}>
@@ -64,7 +68,7 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create({
 	coverContainer: {
-		backgroundColor: '#FFF',
+		backgroundColor: THEME.COLORS.coverBg,
 		padding: 20,
 		flex: 1,
 		justifyContent: 'center',

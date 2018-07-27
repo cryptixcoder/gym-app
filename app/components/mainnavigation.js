@@ -5,6 +5,7 @@ import Classes from '../screens/classes';
 import Photos from '../screens/photos';
 import Rewards from '../screens/rewards';
 import Notifications from '../screens/notifications';
+import LoyaltyCard from '../screens/loyaltycard';
 
 import { createStackNavigator } from 'react-navigation';
 
@@ -34,15 +35,30 @@ const MainNavigation = createStackNavigator(
 	},
 	{
 		navigationOptions: {
-			gesturesEnabled: false
+			gesturesEnabled: false,
+			headerBackTitle: null,
+			headerTruncatedBackTitle: null,
+			headerTintColor: '#000'
 		},
-		headerBackTitle: null,
-		headerTruncatedBackTitle: null,
-		headerTintColor: '#000',
 		headerStyle: {
 			backgroundColor: '#FFF'
 		}
 	}
 );
 
-export default MainNavigation;
+const RootStack = createStackNavigator(
+	{
+		Main: {
+			screen: MainNavigation
+		},
+		LoyaltyCard: {
+			screen: LoyaltyCard
+		}
+	},
+	{
+		mode: 'modal',
+		headerMode: 'none'
+	}
+);
+
+export default RootStack;

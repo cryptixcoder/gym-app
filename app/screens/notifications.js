@@ -4,7 +4,7 @@ import { View, StyleSheet, Text } from 'react-native';
 export default class Notifications extends Component {
 	static navigationOptions = ({ navigation }) => {
 		return {
-			title: 'Upcoming Classes',
+			title: 'Notifications',
 			headerBackTitle: null,
 			headerStyle: {
 				backgroundColor: '#FFF'
@@ -14,7 +14,7 @@ export default class Notifications extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>Home</Text>
+				<Text>No Notifications</Text>
 			</View>
 		);
 	}

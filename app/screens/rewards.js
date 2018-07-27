@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { Container, Content, Body, Text } from 'native-base';
+import { View, StyleSheet } from 'react-native';
+
+import Reward from '../components/reward';
 
 export default class Rewards extends Component {
 	static navigationOptions = ({ navigation }) => {
 		return {
-			title: 'Upcoming Classes',
+			title: 'Rewards',
 			headerBackTitle: null,
 			headerStyle: {
 				backgroundColor: '#FFF'
@@ -13,9 +16,13 @@ export default class Rewards extends Component {
 	};
 	render() {
 		return (
-			<View style={styles.container}>
-				<Text>Home</Text>
-			</View>
+			<Container>
+				<Content>
+					<Reward />
+					<Reward />
+					<Reward />
+				</Content>
+			</Container>
 		);
 	}
 }

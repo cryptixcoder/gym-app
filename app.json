@@ -1,5 +1,18 @@
 {
-  "expo": {
-    "sdkVersion": "27.0.0"
-  }
+	"expo": {
+		"sdkVersion": "27.0.0",
+		"scheme": "gymapp",
+		"name": "White label Gym App",
+		"slug": "gym-app",
+		"description": "White Label Gym App",
+		"version": "1.0.0",
+		"privacy": "unlisted",
+		"orientation": "portrait",
+		"icon": "./app/assets/images/icon.png",
+		"splash": {
+			"image": "./app/assets/images/splashscreen.png",
+			"backgroundColor": "#FFFFFF",
+			"resizeMode": "cover"
+		}
+	}
 }
