@@ -6,6 +6,8 @@ import Photos from '../screens/photos';
 import Rewards from '../screens/rewards';
 import Notifications from '../screens/notifications';
 import LoyaltyCard from '../screens/loyaltycard';
+import Videos from '../screens/videos';
+import Video from '../screens/video';
 
 import { createStackNavigator } from 'react-navigation';
 
@@ -31,6 +33,12 @@ const MainNavigation = createStackNavigator(
 		},
 		Notifications: {
 			screen: Notifications
+		},
+		Videos: {
+			screen: Videos
+		},
+		Video: {
+			screen: Video
 		}
 	},
 	{
